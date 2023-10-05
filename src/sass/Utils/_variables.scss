@@ -1,0 +1,61 @@
+//Colour Palette
+$colour-primary:  #009933;
+// $colour-accent:  linear-gradient(315deg, #d3d3d3 0%, #eccc68 74%);
+$colour-accent:  #00e64d;
+$colour-text:  #1b1b1b;
+$colour-text-inverse:  white;
+$colour-dark:  #1b1b1b;
+$colour-light-fade: rgba(249, 224, 202,0.8);
+$colour-light: rgb(249, 224, 202);
+
+//Font weights
+$fw-reg: 300;
+$fw-bold: 900;
+
+//BoxShadows
+$bshadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+0.125em 0.125em 0.125em rgba(0,0,0,0.15);
+
+//Breakpoints
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 767.98px;
+
+//typographies
+$ff-primary: 'Roboto', sans-serif;
+$ff-secondary: 'Playfair Display', serif;
+$ff-body: 'Nanum Gothic', sans-serif;
+
+$fs-h1: 4rem;
+$fs-h2: 3rem;
+$fs-h3: 1.25rem;
+$fs-body: 1.5rem;
+
+@media(min-width: 800px){
+    $fs-h1: 3rem;
+    $fs-h2: 2rem;
+    $fs-h3: 1.5rem;
+    $fs-body: 1.125rem;
+}
+
+//Global Applications
+
+h1{
+    font-family: $ff-primary;
+    font-size: $fs-h1;
+    font-weight: $fw-bold;
+}
+
+h2{
+    font-family: $ff-secondary;
+    font-size: $fs-h2;
+}
+
+h3{
+    font-family: $ff-secondary;
+    font-size: $fs-h3;
+}
+
+p{
+    font-family: $ff-body;
+    font-size: $fs-body;
+}
