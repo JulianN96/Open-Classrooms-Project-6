@@ -1,0 +1,22 @@
+.banner{
+    display: flex;
+    width: 1240px;
+    height: 68px;
+    justify-content: center;
+    align-items: center;
+    gap: 720.678px;
+    margin: 50px;
+
+    &__nav{
+        display: flex;
+        align-items: flex-start;
+        gap: 57px;
+        & a{
+            font-weight: 500;
+            line-height: 142.6%;
+            font-size: $fs-h3;
+            color: $colour-primary;
+            text-decoration: none;
+        }
+    }
+}

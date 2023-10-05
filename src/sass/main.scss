@@ -1,13 +1,17 @@
 //Utils
+@import './Utils/fontImports';
 @import './Utils/variables';
 //Vendor Sheets
 
 //Base
 
 //Components
-
+@import './Components/rentalsTile';
 //Layout
-
+@import './Layout/rentalsList';
+@import './Layout/banner';
+@import './Layout/footer';
 //Pages
-
+@import './Pages/homepage';
+@import './Pages/error404';
 //Themes

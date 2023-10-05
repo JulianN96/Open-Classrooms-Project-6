@@ -1,11 +1,18 @@
 import '../../App.css';
+import TopBanner from '../../components/TopBanner';
+import Footer from '../../components/Footer';
+import RentalsList from '../../components/RentalsList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Test</h1>
-      </header>
+    <div className="homepage">
+      <TopBanner />
+      <div className='homepage__hero'>
+        <div className='homepage__heroGradient'></div>
+        <h1 className='homepage__heroTitle'>Chez vous, partout et ailleurs</h1>
+      </div>
+      <RentalsList />
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,12 @@
+.rentalsList{
+    width: 1240px;
+    height: 829px;
+    padding: 1em;
+    margin: 25px 0;
+
+    border-radius: 25px;
+    background: #F6F6F6;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));;
+}
