@@ -52,12 +52,19 @@ body {
 .rentalsList {
   width: 1240px;
   height: 829px;
-  padding: 1em;
   margin: 25px 0;
   border-radius: 25px;
   background: #F6F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rentalsList__container {
+  width: 1240px;
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 4em 0;
 }
 
 .banner {
@@ -84,7 +91,7 @@ body {
 
 .footer {
   display: flex;
-  width: 1440px;
+  min-width: 1440px;
   height: 209px;
   padding: 66px 464px 29px 463px;
   flex-direction: column;
@@ -114,29 +121,22 @@ body {
 .homepage {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 .homepage__hero {
-  background-image: url("/src//assets/images/IMG.avif");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/src//assets/images/IMG.avif") no-repeat;
   background-size: cover;
   background-position: center;
   width: 1240px;
   height: 223px;
   flex-shrink: 0;
   border-radius: 25px;
-}
-.homepage__heroGradient {
-  z-index: 1;
-  background: #000;
-  mix-blend-mode: darken;
-  position: absolute;
-  opacity: 0.3;
-  width: 1240px;
-  height: 223px;
-  flex-shrink: 0;
-  border-radius: 25px;
-  overflow: hidden;
 }
 .homepage__heroTitle {
   z-index: 2;

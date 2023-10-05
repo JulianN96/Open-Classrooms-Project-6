@@ -1,32 +1,21 @@
 .homepage{
     display: flex; 
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
     &__hero{
-
-        &Gradient{
-            z-index: 1;
-            background: #000;
-            mix-blend-mode: darken;
-            position: absolute;
-            opacity: 0.3;
-            width: 1240px;
-            height: 223px;
-            flex-shrink: 0;
-            border-radius: 25px;
-            overflow: hidden;
-        }
-
-        background-image: url('/src//assets/images/IMG.avif');
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url('/src//assets/images/IMG.avif') no-repeat;
         background-size: cover;
         background-position: center;
         width: 1240px;
         height: 223px;
         flex-shrink: 0;
         border-radius: 25px;
-
-
         &Title{
             z-index: 2;
             display: flex;

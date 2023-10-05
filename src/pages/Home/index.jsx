@@ -8,7 +8,6 @@ function App() {
     <div className="homepage">
       <TopBanner />
       <div className='homepage__hero'>
-        <div className='homepage__heroGradient'></div>
         <h1 className='homepage__heroTitle'>Chez vous, partout et ailleurs</h1>
       </div>
       <RentalsList />
