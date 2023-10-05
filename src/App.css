@@ -1,23 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-h1 {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+body {
   font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
   font-size: 3rem;
   font-weight: 900;
+  font-weight: 500;
 }
 
 h2 {
-  font-family: "Playfair Display", serif;
   font-size: 2.25rem;
+  font-weight: 500;
 }
 
 h3 {
-  font-family: "Playfair Display", serif;
   font-size: 1.5rem;
+  font-weight: 500;
 }
 
 p {
-  font-family: "Nanum Gothic", sans-serif;
   font-size: 1.125rem;
+  font-weight: 500;
 }
 
 html,
@@ -105,7 +110,7 @@ body {
   width: 122px;
   height: 39.444px;
   flex-shrink: 0;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .footer__copyright {
   display: flex;
@@ -145,6 +150,58 @@ body {
   align-items: center;
   font-weight: 500;
   color: #FFFFFF;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+.about__hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/src//assets/images//kalen-emsley-Bkci_8qcdvQ-unsplash-2.avif") no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 1240px;
+  height: 223px;
+  border-radius: 25px;
+}
+.aboutInfo__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 38px 0;
+}
+.aboutInfo__dropdownBar {
+  display: flex;
+  width: 1023px;
+  padding: 10px 20px 10px 15px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--Red, #FF6060);
+}
+.aboutInfo__dropdownBarTitle {
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+.aboutInfo__dropdownBar:hover, .aboutInfo__dropdownBar :focus {
+  cursor: pointer;
+}
+.aboutInfo__dropdownInfoContainer {
+  width: 1020px;
+  border-radius: 10px 10px 5px 5px;
+  background: var(--Gray, #F6F6F6);
+  padding: 20px 20px 20px 20px;
+  display: flex;
+  align-items: flex-start;
+}
+.aboutInfo__dropdownInfoText {
+  margin: 0;
+  color: #FF6060;
+  font-weight: 400;
+  line-height: 142.6%;
 }
 
 .error404 {
