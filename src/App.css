@@ -20,6 +20,12 @@ p {
   font-size: 1.125rem;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .rentalsList__tile {
   width: 340px;
   height: 340px;
@@ -56,7 +62,7 @@ p {
 
 .banner {
   display: flex;
-  width: 1240px;
+  min-width: 1240px;
   height: 68px;
   justify-content: center;
   align-items: center;
@@ -139,6 +145,36 @@ p {
   align-items: center;
   font-weight: 500;
   color: #FFFFFF;
+}
+
+.error404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FF6060;
+  max-width: fit-content;
+}
+.error404__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.error404__404 {
+  font-size: 288px;
+  font-weight: 700;
+  width: 597px;
+  height: 263px;
+  margin: 0 0 139px 0;
+}
+.error404__text {
+  font-size: 2.25rem;
+  margin: 0 0 139px 0;
+}
+.error404__Link {
+  color: #FF6060;
+  margin: 0 0 139px 0;
 }
 
 /*# sourceMappingURL=App.css.map */
