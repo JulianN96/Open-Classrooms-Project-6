@@ -70,6 +70,10 @@ body {
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 4em 0;
+  overflow: hidden;
+}
+.rentalsList__Link {
+  text-decoration: none;
 }
 
 .banner {
@@ -179,20 +183,21 @@ body {
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
-  background: var(--Red, #FF6060);
+  background: var(--Red, #ff6060);
 }
 .aboutInfo__dropdownBarTitle {
   margin: 0;
   color: #FFFFFF;
   font-size: 1.5rem;
 }
-.aboutInfo__dropdownBar:hover, .aboutInfo__dropdownBar :focus {
+.aboutInfo__dropdownBar:hover,
+.aboutInfo__dropdownBar :focus {
   cursor: pointer;
 }
 .aboutInfo__dropdownInfoContainer {
   width: 1020px;
   border-radius: 10px 10px 5px 5px;
-  background: var(--Gray, #F6F6F6);
+  background: var(--Gray, #f6f6f6);
   padding: 20px 20px 20px 20px;
   display: flex;
   align-items: flex-start;

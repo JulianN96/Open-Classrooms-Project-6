@@ -16,6 +16,11 @@
         justify-items: center;
         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));;
         gap: 4em 0;
+        overflow: hidden;
            
+    }
+
+    &__Link{
+        text-decoration: none;
     }
 }
