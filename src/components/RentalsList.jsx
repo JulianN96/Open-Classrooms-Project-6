@@ -7,7 +7,7 @@ export default function RentalsList() {
   const rentalData = testdata
 
   const rentals = rentalData.map(rental => (
-  <article style={{backgroundImage: `url(${rental.cover})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}} className='rentalsList__tile'>
+  <article key={rental.id} style={{backgroundImage: `url(${rental.cover})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}} className='rentalsList__tile'>
    <Link className='rentalsList__Link' to={`/rental/${rental.id}`} >
    <div className='rentalsList__tileGradient'>
       <h3 className='rentalsList__tileTitle' >{rental.title}</h3>

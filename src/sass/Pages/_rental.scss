@@ -1,0 +1,121 @@
+.rental {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $colour-primary;
+  &__container {
+    width: 1240px;
+  }
+  &__hero {
+    height: 415px;
+    background-color: $colour-primary;
+    border-radius: 25px;
+  }
+  &__titleHostContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+  }
+  &__title {
+    font-size: $fs-h2;
+    line-height: 142.6%;
+    margin: 0;
+  }
+  &__location {
+    margin: 0;
+    font-size: $fs-body;
+  }
+  &__tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  &__tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 115px;
+    height: 25px;
+    background: $colour-primary;
+    border-radius: 10px;
+    &Text {
+      margin: 0;
+      color: $colour-text;
+      text-align: center;
+      font-size: 14px;
+      line-height: 142.6%;
+    }
+  }
+
+  &__host {
+    &InfoContainer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &Container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &Name {
+      text-align: right;
+      font-size: $fs-body;
+      line-height: 142.6%;
+    }
+    &Image {
+      width: 64px;
+      height: 64px;
+      fill: #c4c4c4;
+      border-radius: 50%;
+    }
+  }
+
+  &Info {
+    &__Container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      margin: 38px 0;
+    }
+    &__dropdown {
+      &Bar {
+        display: flex;
+        width: 557px;
+        padding: 10px 20px 10px 15px;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        background: $colour-primary;
+        &Title {
+          margin: 0;
+          color: $colour-text;
+          font-size: $fs-h3;
+        }
+        &:hover,
+        :focus {
+          cursor: pointer;
+        }
+      }
+
+      &Info {
+        &Container {
+          width: 553px;
+          border-radius: 10px 10px 5px 5px;
+          background: var(--Gray, #f6f6f6);
+          padding: 20px 20px 20px 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        &Text {
+          margin: 0;
+          color: $colour-primary;
+          font-weight: 400;
+          line-height: 142.6%;
+        }
+      }
+    }
+  }
+}
