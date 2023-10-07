@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useState } from 'react';
+// import { useState } from 'react';
 import TopBanner from '../components/TopBanner';
 import Footer from '../components/Footer';
 import testdata from '../data/testdata.json';
@@ -13,10 +13,10 @@ export default function Rental() {
   console.log(useParams())
   const rental = rentalData.find((thisrental) => thisrental.id === rentalId.id);
 
-  const[menuOpen, setMenuOpen] = useState(false)
+  // const[menuOpen, setMenuOpen] = useState(false)
 
   const toggleMenuOpen = event => {
-    setMenuOpen (current => !current)
+    // setMenuOpen (current => !current)
     console.log('toggled')
     console.log(event.currentTarget.children[1])
     event.currentTarget.nextSibling.classList.toggle('rentalInfo__dropdownInfoContainer--hidden')

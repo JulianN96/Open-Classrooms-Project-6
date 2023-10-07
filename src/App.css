@@ -97,6 +97,10 @@ body {
   color: #FF6060;
   text-decoration: none;
 }
+.banner__nav--active {
+  text-decoration: underline;
+  border-bottom: #FF6060 solid 2px;
+}
 
 .footer {
   display: flex;
