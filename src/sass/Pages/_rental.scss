@@ -70,6 +70,11 @@
       fill: #c4c4c4;
       border-radius: 50%;
     }
+    
+    // &StarMeter{
+    //     display: flex;
+    //     gap: 2em;
+    // }
   }
 
   &Info {
@@ -97,6 +102,12 @@
         :focus {
           cursor: pointer;
         }
+        &Arrow{
+          transition: transform 250ms ease-in-out;
+          &--rotated{
+            transform: rotate(180deg);
+          }
+        }
       }
 
       &Info {
@@ -108,6 +119,15 @@
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+          transition: transform 250ms ease-in-out;
+          
+          transform-origin: 50% 0%;
+          transform: scaleY(1);
+          &--hidden{
+            // display: none;
+            transform: scaleY(0);
+            height: 0;
+          }
         }
         &Text {
           margin: 0;
