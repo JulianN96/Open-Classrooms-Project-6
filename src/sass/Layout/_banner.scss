@@ -2,22 +2,44 @@
     display: flex;
     min-width: 1240px;
     height: 68px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 720.678px;
     margin: 50px;
-
+    @media (max-width: $breakpoint-mobile){
+        min-width: 335px;
+        max-width: 335px;
+        margin: 20px 0 27px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 26px;
+        flex: 1 0 0;
+    };
+    &__logo{
+        width: 145px;
+        height: 46.881px;
+    }
     &__nav{
         display: flex;
         align-items: flex-start;
         gap: 57px;
-        
+        @media (max-width: $breakpoint-mobile){
+            width: 190px;
+            gap: 10px;
+            justify-content: space-evenly;
+        };
         & a{
             font-weight: 500;
             line-height: 142.6%;
             font-size: $fs-h3;
             color: $colour-primary;
             text-decoration: none;
+            @media(max-width: $breakpoint-mobile){
+                font-size: $fs-mobile-body;
+                text-align: right;
+                text-transform: uppercase;
+            }
         }
         &--active{
             text-decoration: underline;

@@ -4,6 +4,10 @@
     flex-shrink: 0;
     border-radius: 10px;
     background: $colour-primary;
+    @media (max-width: $breakpoint-mobile){
+        max-width: 335px;    
+        max-height: 255px;    
+    };
     &Gradient{
         display: flex;
         align-items: flex-end;

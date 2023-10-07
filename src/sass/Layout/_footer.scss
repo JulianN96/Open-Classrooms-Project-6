@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  min-width: 1440px;
+  max-width: 1440px;
   height: 209px;
   padding: 66px 464px 29px 463px;
   flex-direction: column;
@@ -9,11 +9,27 @@
   gap: 28.556px;
   background: #000;
   margin: 0;
+  @media (max-width: $breakpoint-mobile){
+    display: flex;
+    width: 100vw;
+    height: 209px;
+    // padding: 0 120.313px 0 121.094px;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  };
   &__logo {
     width: 122px;
     height: 39.444px;
     flex-shrink: 0;
     color: #ffffff;
+    @media (max-width: $breakpoint-mobile){
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    };
   }
   &__copyright {
     display: flex;
@@ -24,6 +40,13 @@
     justify-content: flex-end;
     flex-shrink: 0;
     color: $colour-text;
+    @media (max-width: $breakpoint-mobile){
+      margin: 0;
+      display: flex;
+      max-width: 133px;
+      font-size: $fs-mobile-body; 
+      text-align: center;
+    };
   }
 }
 //TODO: Fix spacing on logo
