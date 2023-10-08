@@ -27,6 +27,8 @@ p {
 
 html,
 body {
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -61,7 +63,7 @@ body {
 }
 
 .rentalsList {
-  width: 1240px;
+  width: 100%;
   height: 829px;
   margin: 25px 0;
   border-radius: 25px;
@@ -69,7 +71,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: scroll;
 }
 @media (max-width: 767.98px) {
   .rentalsList {
@@ -79,12 +81,14 @@ body {
   }
 }
 .rentalsList__container {
-  width: 1240px;
+  width: 100%;
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 4em 0;
+  gap: 4em 2em;
   overflow: hidden;
+  align-self: flex-start;
+  margin: 2em;
 }
 @media (max-width: 767.98px) {
   .rentalsList__container {
@@ -100,11 +104,10 @@ body {
 
 .banner {
   display: flex;
-  min-width: 1240px;
+  min-width: 100%;
   height: 68px;
   justify-content: space-between;
   align-items: center;
-  gap: 720.678px;
   margin: 50px;
 }
 @media (max-width: 767.98px) {
@@ -156,9 +159,9 @@ body {
 
 .footer {
   display: flex;
-  max-width: 1440px;
+  width: 100vw;
   height: 209px;
-  padding: 66px 464px 29px 463px;
+  padding: 66px 0 29px 0;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
@@ -217,6 +220,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  width: 90vw;
 }
 @media (max-width: 767.98px) {
   .homepage {
@@ -231,7 +235,7 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/src//assets/images/IMG.avif") no-repeat;
   background-size: cover;
   background-position: center;
-  width: 1240px;
+  width: 100%;
   height: 223px;
   flex-shrink: 0;
   border-radius: 25px;
@@ -262,6 +266,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  width: 90vw;
 }
 .about__hero {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/src//assets/images//kalen-emsley-Bkci_8qcdvQ-unsplash-2.avif") no-repeat;
@@ -347,6 +352,7 @@ body {
   align-items: center;
   color: #FF6060;
   max-width: fit-content;
+  width: 90vw;
 }
 .error404__container {
   display: flex;
@@ -376,6 +382,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #FF6060;
+  width: 90vw;
 }
 .rental__container {
   width: 1240px;

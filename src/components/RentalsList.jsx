@@ -10,7 +10,7 @@ export default function RentalsList() {
   <article key={rental.id} style={{backgroundImage: `url(${rental.cover})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}} className='rentalsList__tile'>
    <Link className='rentalsList__Link' to={`/rental/${rental.id}`} >
    <div className='rentalsList__tileGradient'>
-      <h3 className='rentalsList__tileTitle' >{rental.title}</h3>
+      <h2 className='rentalsList__tileTitle' >{rental.title}</h2>
     </div>
    </Link>
   </article>
@@ -19,12 +19,13 @@ export default function RentalsList() {
   return (
     <div className='rentalsList'>
       <div className='rentalsList__container'>
-        {rentals[0]}
+        {rentals}
+        {/* {rentals[0]}
         {rentals[1]}
         {rentals[2]}
         {rentals[3]}
         {rentals[4]}
-        {rentals[5]}
+        {rentals[5]} */}
       </div>
     </div>
   );
