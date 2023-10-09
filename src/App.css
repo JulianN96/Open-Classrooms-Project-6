@@ -88,7 +88,7 @@ body {
   gap: 4em 2em;
   overflow: hidden;
   align-self: flex-start;
-  margin: 2em;
+  margin: 2em 0;
 }
 @media (max-width: 767.98px) {
   .rentalsList__container {
@@ -385,31 +385,70 @@ body {
   width: 90vw;
 }
 .rental__container {
-  width: 1240px;
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .rental__container {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .rental__hero {
   height: 415px;
   background-color: #FF6060;
   border-radius: 25px;
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .rental__hero {
+    width: 335px;
+    height: 255px;
+  }
 }
 .rental__titleHostContainer {
   display: flex;
   justify-content: space-between;
   margin: 30px 0;
 }
+@media (max-width: 767.98px) {
+  .rental__titleHostContainer {
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0;
+  }
+}
 .rental__title {
   font-size: 2.25rem;
   line-height: 142.6%;
   margin: 0;
 }
+@media (max-width: 767.98px) {
+  .rental__title {
+    font-size: 1.125rem;
+  }
+}
 .rental__location {
   margin: 0;
   font-size: 1.125rem;
+}
+@media (max-width: 767.98px) {
+  .rental__location {
+    font-size: 14px;
+  }
 }
 .rental__tags {
   display: flex;
   gap: 10px;
   margin-top: 20px;
+}
+@media (max-width: 767.98px) {
+  .rental__tags {
+    width: 100%;
+    overflow: scroll;
+  }
 }
 .rental__tag {
   display: flex;
@@ -420,12 +459,24 @@ body {
   background: #FF6060;
   border-radius: 10px;
 }
+@media (max-width: 767.98px) {
+  .rental__tag {
+    min-width: 84px;
+    height: 18px;
+    border-radius: 5px;
+  }
+}
 .rental__tagText {
   margin: 0;
   color: #FFFFFF;
   text-align: center;
   font-size: 14px;
   line-height: 142.6%;
+}
+@media (max-width: 767.98px) {
+  .rental__tagText {
+    font-size: 10px;
+  }
 }
 .rental__hostInfoContainer {
   display: flex;
@@ -438,10 +489,21 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+@media (max-width: 767.98px) {
+  .rental__hostContainer {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
 .rental__hostName {
   text-align: right;
   font-size: 1.125rem;
   line-height: 142.6%;
+}
+@media (max-width: 767.98px) {
+  .rental__hostName {
+    font-size: 0.75rem;
+  }
 }
 .rental__hostImage {
   width: 64px;
@@ -449,25 +511,64 @@ body {
   fill: #c4c4c4;
   border-radius: 50%;
 }
+@media (max-width: 767.98px) {
+  .rental__hostImage {
+    width: 32px;
+    height: 32px;
+  }
+}
+.rental__hostStars {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .rental__hostStarMeter {
+    width: 98px;
+  }
+}
 .rentalInfo__Container {
   display: flex;
   justify-content: space-between;
   gap: 30px;
   margin: 38px 0;
 }
+@media (max-width: 767.98px) {
+  .rentalInfo__Container {
+    flex-direction: column;
+    width: 353px;
+    margin-top: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .rentalInfo__dropdown {
+    width: 300px;
+    height: 12px;
+  }
+}
 .rentalInfo__dropdownBar {
   display: flex;
-  width: 557px;
+  width: 38vw;
   padding: 10px 20px 10px 15px;
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
   background: #FF6060;
 }
+@media (max-width: 767.98px) {
+  .rentalInfo__dropdownBar {
+    width: 300px;
+    height: 12px;
+  }
+}
 .rentalInfo__dropdownBarTitle {
   margin: 0;
   color: #FFFFFF;
   font-size: 1.5rem;
+}
+@media (max-width: 767.98px) {
+  .rentalInfo__dropdownBarTitle {
+    font-size: 13px;
+  }
 }
 .rentalInfo__dropdownBar:hover,
 .rentalInfo__dropdownBar :focus {
@@ -479,8 +580,15 @@ body {
 .rentalInfo__dropdownBarArrow--rotated {
   transform: rotate(180deg);
 }
+@media (max-width: 767.98px) {
+  .rentalInfo__dropdownBarArrow {
+    font-size: 13px;
+    width: 32px;
+    height: 32px;
+  }
+}
 .rentalInfo__dropdownInfoContainer {
-  width: 553px;
+  width: 37.75vw;
   border-radius: 10px 10px 5px 5px;
   background: var(--Gray, #f6f6f6);
   padding: 20px 20px 20px 20px;
@@ -495,11 +603,22 @@ body {
   transform: scaleY(0);
   height: 0;
 }
+@media (max-width: 767.98px) {
+  .rentalInfo__dropdownInfoContainer {
+    width: 300px;
+    height: 12px;
+  }
+}
 .rentalInfo__dropdownInfoText {
   margin: 0;
   color: #FF6060;
   font-weight: 400;
   line-height: 142.6%;
+}
+@media (max-width: 767.98px) {
+  .rentalInfo__dropdownInfoText {
+    font-size: 0.75rem;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

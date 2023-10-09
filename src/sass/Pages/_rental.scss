@@ -6,31 +6,59 @@
   color: $colour-primary;
   width: 90vw;
   &__container {
-    width: 1240px;
+    width: 100%;
+    @media (max-width: $breakpoint-mobile){
+      width: 90vw;
+      display: flex; 
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &__hero {
     height: 415px;
     background-color: $colour-primary;
     border-radius: 25px;
+    width: 100%;
+    @media (max-width: $breakpoint-mobile){
+      width: 335px;
+      height: 255px;
+    };
   }
   &__titleHostContainer {
     display: flex;
     justify-content: space-between;
     margin: 30px 0;
+    @media (max-width: $breakpoint-mobile){
+      flex-direction: column;
+      width: 100%;
+      margin: 15px 0;
+      
+    }
   }
   &__title {
     font-size: $fs-h2;
     line-height: 142.6%;
     margin: 0;
+    @media (max-width: $breakpoint-mobile){
+      font-size: $fs-body;
+    };
   }
   &__location {
     margin: 0;
     font-size: $fs-body;
+    @media (max-width: $breakpoint-mobile){
+      font-size: 14px;
+    };
   }
   &__tags {
     display: flex;
     gap: 10px;
     margin-top: 20px;
+    @media (max-width: $breakpoint-mobile){
+      width: 100%;
+      overflow: scroll;
+    };
   }
   &__tag {
     display: flex;
@@ -40,16 +68,25 @@
     height: 25px;
     background: $colour-primary;
     border-radius: 10px;
+    @media (max-width: $breakpoint-mobile){
+      min-width: 84px;
+      height: 18px;
+      border-radius: 5px;
+    };
     &Text {
       margin: 0;
       color: $colour-text;
       text-align: center;
       font-size: 14px;
       line-height: 142.6%;
+      @media (max-width: $breakpoint-mobile){
+        font-size: 10px;
+      };
     }
   }
 
   &__host {
+
     &InfoContainer {
       display: flex;
       align-items: center;
@@ -60,45 +97,78 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @media (max-width: $breakpoint-mobile){
+        flex-direction: row-reverse;
+        align-items: center;
+      };
     }
     &Name {
       text-align: right;
       font-size: $fs-body;
       line-height: 142.6%;
+      @media (max-width: $breakpoint-mobile){
+        font-size: $fs-mobile-body;
+      };
     }
     &Image {
       width: 64px;
       height: 64px;
       fill: #c4c4c4;
       border-radius: 50%;
+      @media (max-width: $breakpoint-mobile){
+        width: 32px;
+        height: 32px;
+      };
     }
-    
-    // &StarMeter{
-    //     display: flex;
-    //     gap: 2em;
-    // }
+    &Stars{
+      display: flex;
+      align-items: center;
+    }
+    &StarMeter{
+      @media (max-width: $breakpoint-mobile){
+        width: 98px;
+      };
+    }
   }
 
   &Info {
     &__Container {
+      
       display: flex;
       justify-content: space-between;
       gap: 30px;
       margin: 38px 0;
+      @media (max-width: $breakpoint-mobile){
+        flex-direction: column;
+        width: 353px;
+        margin-top: 0;
+      };
     }
     &__dropdown {
+      @media (max-width: $breakpoint-mobile){
+        width: 300px;
+        height: 12px;
+      };
       &Bar {
         display: flex;
-        width: 557px;
+        width: 38vw;
         padding: 10px 20px 10px 15px;
         justify-content: space-between;
         align-items: center;
         border-radius: 5px;
         background: $colour-primary;
+        @media (max-width: $breakpoint-mobile){
+          width: 300px;
+          height: 12px;
+          
+        };
         &Title {
           margin: 0;
           color: $colour-text;
           font-size: $fs-h3;
+          @media (max-width: $breakpoint-mobile){
+            font-size: 13px;
+          };
         }
         &:hover,
         :focus {
@@ -109,12 +179,17 @@
           &--rotated{
             transform: rotate(180deg);
           }
+          @media (max-width: $breakpoint-mobile){
+            font-size: 13px;
+            width: 32px;
+            height: 32px;
+          };
         }
       }
 
       &Info {
         &Container {
-          width: 553px;
+          width: 37.75vw;
           border-radius: 10px 10px 5px 5px;
           background: var(--Gray, #f6f6f6);
           padding: 20px 20px 20px 20px;
@@ -122,20 +197,25 @@
           flex-direction: column;
           align-items: flex-start;
           transition: transform 250ms ease-in-out;
-          
           transform-origin: 50% 0%;
           transform: scaleY(1);
           &--hidden{
-            // display: none;
             transform: scaleY(0);
             height: 0;
           }
+          @media (max-width: $breakpoint-mobile){
+            width: 300px;
+            height: 12px;
+          };
         }
         &Text {
           margin: 0;
           color: $colour-primary;
           font-weight: 400;
           line-height: 142.6%;
+          @media (max-width: $breakpoint-mobile){
+            font-size: $fs-mobile-body;
+          };
         }
       }
     }

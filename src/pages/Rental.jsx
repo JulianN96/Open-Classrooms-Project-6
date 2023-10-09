@@ -13,10 +13,7 @@ export default function Rental() {
   console.log(useParams())
   const rental = rentalData.find((thisrental) => thisrental.id === rentalId.id);
 
-  // const[menuOpen, setMenuOpen] = useState(false)
-
   const toggleMenuOpen = event => {
-    // setMenuOpen (current => !current)
     console.log('toggled')
     console.log(event.currentTarget.children[1])
     event.currentTarget.nextSibling.classList.toggle('rentalInfo__dropdownInfoContainer--hidden')
