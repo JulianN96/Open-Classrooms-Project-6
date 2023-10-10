@@ -1,20 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-// import { useState } from 'react';
-import TopBanner from '../components/TopBanner';
-import Footer from '../components/Footer';
 import testdata from '../data/testdata.json';
+import Tag from '../components/Tag';
 
 export default function Rental() {
   const rentalData = testdata;
 
   const rentalId  = useParams();
-  console.log(rentalId.id)
-  console.log(useParams())
   const rental = rentalData.find((thisrental) => thisrental.id === rentalId.id);
 
   const toggleMenuOpen = event => {
-    console.log('toggled')
     console.log(event.currentTarget.children[1])
     event.currentTarget.nextSibling.classList.toggle('rentalInfo__dropdownInfoContainer--hidden')
     event.currentTarget.children[1].classList.toggle('rentalInfo__dropdownBarArrow--rotated')
@@ -36,13 +31,7 @@ export default function Rental() {
           <div className='rental__titleContainer'>
             <h1 className='rental__title'>{rental.title}</h1>
             <h2 className='rental__location'>{rental.location}</h2>
-            <div className='rental__tags'>
-              {rental.tags.map((tag) => (
-                <div key={tag} className='rental__tag'>
-                  <p className='rental__tagText'>{tag}</p>
-                </div>
-              ))}
-            </div>
+            <Tag tags={rental.tags} />
           </div>
           <div className='rental__hostContainer'>
             <div className='rental__hostInfoContainer'>
