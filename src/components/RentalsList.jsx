@@ -20,12 +20,6 @@ export default function RentalsList() {
     <div className='rentalsList'>
       <div className='rentalsList__container'>
         {rentals}
-        {/* {rentals[0]}
-        {rentals[1]}
-        {rentals[2]}
-        {rentals[3]}
-        {rentals[4]}
-        {rentals[5]} */}
       </div>
     </div>
   );

@@ -272,35 +272,57 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/src//assets/images//kalen-emsley-Bkci_8qcdvQ-unsplash-2.avif") no-repeat;
   background-size: cover;
   background-position: center;
-  width: 1240px;
+  width: 100%;
   height: 223px;
   border-radius: 25px;
+}
+.aboutInfo {
+  width: 100%;
 }
 .aboutInfo__container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
   margin: 38px 0;
+  width: 100%;
 }
 .aboutInfo__dropdown {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-grow: 0;
   height: 52px;
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .aboutInfo__dropdown {
+    height: 10px;
+  }
 }
 .aboutInfo__dropdownBar {
   display: flex;
-  width: 1023px;
+  width: 96%;
   padding: 10px 20px 10px 15px;
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
   background: #FF6060;
 }
+@media (max-width: 767.98px) {
+  .aboutInfo__dropdownBar {
+    height: 12px;
+  }
+}
 .aboutInfo__dropdownBarTitle {
   margin: 0;
   color: #FFFFFF;
   font-size: 1.5rem;
+}
+@media (max-width: 767.98px) {
+  .aboutInfo__dropdownBarTitle {
+    font-size: 13px;
+  }
 }
 .aboutInfo__dropdownBar:hover,
 .aboutInfo__dropdownBar :focus {
@@ -313,7 +335,7 @@ body {
   transform: rotate(180deg);
 }
 .aboutInfo__dropdownInfoContainer {
-  width: 1020px;
+  width: 96%;
   border-radius: 10px 10px 5px 5px;
   background: var(--Gray, #f6f6f6);
   padding: 20px 20px 20px 20px;
@@ -333,6 +355,11 @@ body {
   color: #FF6060;
   font-weight: 400;
   line-height: 142.6%;
+}
+@media (max-width: 767.98px) {
+  .aboutInfo__dropdownInfoText {
+    font-size: 0.75rem;
+  }
 }
 
 @keyframes hideInfo {
@@ -531,13 +558,20 @@ body {
   justify-content: space-between;
   gap: 30px;
   margin: 38px 0;
+  align-items: center;
 }
 @media (max-width: 767.98px) {
   .rentalInfo__Container {
     flex-direction: column;
     width: 353px;
-    margin-top: 0;
+    margin-top: 40px;
   }
+}
+.rentalInfo__dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 @media (max-width: 767.98px) {
   .rentalInfo__dropdown {

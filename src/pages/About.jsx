@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 
 export default function About() {
   const[menuOpen, setMenuOpen] = useState(false)
+  console.log(window.width)
 
   const toggleMenuOpen = event => {
     setMenuOpen (current => !current)
@@ -20,7 +21,6 @@ export default function About() {
 
   return (
     <div className='about'>
-      <TopBanner />
       <div className='about__hero'/>
       <div className='aboutInfo__container'>
         <article className='aboutInfo__dropdown'>
@@ -60,7 +60,6 @@ export default function About() {
           <div className='aboutInfo__dropdownInfoContainer aboutInfo__dropdownInfoContainer--hidden'><p className='aboutInfo__dropdownInfoText'>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond qux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos equipes de vérifier que les standards sont bien respectés. Nous organisons également des atelieres sur la sécurité domestique pour nos hôtes.</p></div>
         </article>
       </div>
-      <Footer />
     </div>
   )
 }

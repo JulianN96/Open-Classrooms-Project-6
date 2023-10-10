@@ -22,7 +22,6 @@ export default function Rental() {
 
   return (
     <div className='rental'>
-      <TopBanner />
       <div className='rental__container'>
         <div
           className='rental__hero'
@@ -144,7 +143,6 @@ export default function Rental() {
           </article>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
