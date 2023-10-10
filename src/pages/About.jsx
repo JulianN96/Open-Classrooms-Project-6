@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import TopBanner from '../components/TopBanner'
-import Footer from '../components/Footer'
+import Hero from '../components/Hero'
+import backgroundImg from '../assets/images/kalen-emsley-Bkci_8qcdvQ-unsplash-2.avif'
 
 export default function About() {
   const[menuOpen, setMenuOpen] = useState(false)
@@ -21,7 +21,7 @@ export default function About() {
 
   return (
     <div className='about'>
-      <div className='about__hero'/>
+      <Hero background={backgroundImg}/>
       <div className='aboutInfo__container'>
         <article className='aboutInfo__dropdown'>
           <div className='aboutInfo__dropdownBar' id='fiabilite' onClick={toggleMenuOpen}>
