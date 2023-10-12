@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Hero from '../components/Hero'
 import backgroundImg from '../assets/images/kalen-emsley-Bkci_8qcdvQ-unsplash-2.avif'
+import CollapseBar from '../components/CollapseBar'
 
 export default function About() {
   const[menuOpen, setMenuOpen] = useState(false)
@@ -22,8 +23,29 @@ export default function About() {
   return (
     <div className='about'>
       <Hero background={backgroundImg}/>
+
       <div className='aboutInfo__container'>
-        <article className='aboutInfo__dropdown'>
+        <CollapseBar 
+          key=''
+          title='Fiabilité'
+          content='Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.'
+        />
+        <CollapseBar 
+          key=''
+          title='Respect'
+          content='La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.'
+        />
+        <CollapseBar 
+          key=''
+          title='Service'
+          content='La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.'
+        />
+        <CollapseBar 
+          key=''
+          title='Sécurité'
+          content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond qux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos equipes de vérifier que les standards sont bien respectés. Nous organisons également des atelieres sur la sécurité domestique pour nos hôtes."
+        />
+        {/* <article className='aboutInfo__dropdown'>
           <div className='aboutInfo__dropdownBar' id='fiabilite' onClick={toggleMenuOpen}>
             <h2 className='aboutInfo__dropdownBarTitle'>Fiabilité</h2>
             <svg className='aboutInfo__dropdownBarArrow aboutInfo__dropdownBarArrow--rotated' xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
@@ -58,7 +80,7 @@ export default function About() {
             </svg>
           </div>
           <div className='aboutInfo__dropdownInfoContainer aboutInfo__dropdownInfoContainer--hidden'><p className='aboutInfo__dropdownInfoText'>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond qux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos equipes de vérifier que les standards sont bien respectés. Nous organisons également des atelieres sur la sécurité domestique pour nos hôtes.</p></div>
-        </article>
+        </article> */}
       </div>
     </div>
   )

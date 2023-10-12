@@ -139,91 +139,90 @@
       justify-content: space-between;
       gap: 30px;
       margin: 38px 0;
-      align-items: center;
+      align-items: flex-start;
       @media (max-width: $breakpoint-mobile){
         flex-direction: column;
-        width: 353px;
-        margin-top: 40px;
+        margin-top: 0;
       };
     }
-    &__dropdown {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-      @media (max-width: $breakpoint-mobile){
-        width: 300px;
-        height: 12px;
-      };
-      &Bar {
-        display: flex;
-        width: 38vw;
-        padding: 10px 20px 10px 15px;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 5px;
-        background: $colour-primary;
-        @media (max-width: $breakpoint-mobile){
-          width: 300px;
-          height: 12px;
+    // &__dropdown {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   width: 100%;
+    //   @media (max-width: $breakpoint-mobile){
+    //     width: 300px;
+    //     height: 12px;
+    //   };
+    //   &Bar {
+    //     display: flex;
+    //     width: 38vw;
+    //     padding: 10px 20px 10px 15px;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     border-radius: 5px;
+    //     background: $colour-primary;
+    //     @media (max-width: $breakpoint-mobile){
+    //       width: 300px;
+    //       height: 12px;
           
-        };
-        &Title {
-          margin: 0;
-          color: $colour-text;
-          font-size: $fs-h3;
-          @media (max-width: $breakpoint-mobile){
-            font-size: 13px;
-          };
-        }
-        &:hover,
-        :focus {
-          cursor: pointer;
-        }
-        &Arrow{
-          transition: transform 250ms ease-in-out;
-          &--rotated{
-            transform: rotate(180deg);
-          }
-          @media (max-width: $breakpoint-mobile){
-            font-size: 13px;
-            width: 32px;
-            height: 32px;
-          };
-        }
-      }
+    //     };
+    //     &Title {
+    //       margin: 0;
+    //       color: $colour-text;
+    //       font-size: $fs-h3;
+    //       @media (max-width: $breakpoint-mobile){
+    //         font-size: 13px;
+    //       };
+    //     }
+    //     &:hover,
+    //     :focus {
+    //       cursor: pointer;
+    //     }
+    //     &Arrow{
+    //       transition: transform 250ms ease-in-out;
+    //       &--rotated{
+    //         transform: rotate(180deg);
+    //       }
+    //       @media (max-width: $breakpoint-mobile){
+    //         font-size: 13px;
+    //         width: 32px;
+    //         height: 32px;
+    //       };
+    //     }
+    //   }
 
-      &Info {
-        &Container {
-          width: 37.75vw;
-          border-radius: 10px 10px 5px 5px;
-          background: var(--Gray, #f6f6f6);
-          padding: 20px 20px 20px 20px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          transition: transform 250ms ease-in-out;
-          transform-origin: 50% 0%;
-          transform: scaleY(1);
-          &--hidden{
-            transform: scaleY(0);
-            height: 0;
-          }
-          @media (max-width: $breakpoint-mobile){
-            width: 300px;
-            height: 12px;
-          };
-        }
-        &Text {
-          margin: 0;
-          color: $colour-primary;
-          font-weight: 400;
-          line-height: 142.6%;
-          @media (max-width: $breakpoint-mobile){
-            font-size: $fs-mobile-body;
-          };
-        }
-      }
-    }
+    //   &Info {
+    //     &Container {
+    //       width: 37.75vw;
+    //       border-radius: 10px 10px 5px 5px;
+    //       background: var(--Gray, #f6f6f6);
+    //       padding: 20px 20px 20px 20px;
+    //       display: flex;
+    //       flex-direction: column;
+    //       align-items: flex-start;
+    //       transition: transform 250ms ease-in-out;
+    //       transform-origin: 50% 0%;
+    //       transform: scaleY(1);
+    //       &--hidden{
+    //         transform: scaleY(0);
+    //         height: 0;
+    //       }
+    //       @media (max-width: $breakpoint-mobile){
+    //         width: 300px;
+    //         height: 12px;
+    //       };
+    //     }
+    //     &Text {
+    //       margin: 0;
+    //       color: $colour-primary;
+    //       font-weight: 400;
+    //       line-height: 142.6%;
+    //       @media (max-width: $breakpoint-mobile){
+    //         font-size: $fs-mobile-body;
+    //       };
+    //     }
+    //   }
+    // }
   }
 }

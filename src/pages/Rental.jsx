@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import testdata from '../data/testdata.json';
 import Tag from '../components/Tag';
+import CollapseBar from '../components/CollapseBar';
 
 export default function Rental() {
   const rentalData = testdata;
@@ -18,6 +19,11 @@ export default function Rental() {
     );
   };
 
+  const equipments = rental.equipments.map((equipment) => (
+    <p key={equipment} className='collapse__dropdownInfoText'>
+      {equipment}
+    </p>
+  ))
   return (
     <div className='rental'>
       <div className='rental__container'>
@@ -84,7 +90,7 @@ export default function Rental() {
         </div>
 
         <div className='rentalInfo__Container'>
-          <article className='rentalInfo__dropdown'>
+          {/* <article className='rentalInfo__dropdown'>
             <div className='rentalInfo__dropdownBar' onClick={toggleMenuOpen}>
               <h2 className='rentalInfo__dropdownBarTitle'>Description</h2>
               <svg
@@ -106,8 +112,16 @@ export default function Rental() {
                 {rental.description}
               </p>
             </div>
-          </article>
-          <article className='rentalInfo__dropdown'>
+          </article> */}
+
+          <CollapseBar 
+            key={rental.id}
+            title='Description'
+            content={rental.description}
+          />
+
+
+          {/* <article className='rentalInfo__dropdown'>
             <div className='rentalInfo__dropdownBar' onClick={toggleMenuOpen}>
               <h2 className='rentalInfo__dropdownBarTitle'>Équipments</h2>
               <svg
@@ -124,14 +138,19 @@ export default function Rental() {
                 />
               </svg>
             </div>
-            <div className='rentalInfo__dropdownInfoContainer rentalInfo__dropdownInfoContainer--hidden'>
+            <div className='rentalInfo__dropdownInfoContainer rentalInfo__dropdownInfoContainer--hidden'>         
               {rental.equipments.map((equipment) => (
                 <p key={equipment} className='rentalInfo__dropdownInfoText'>
                   {equipment}
                 </p>
               ))}
             </div>
-          </article>
+          </article> */}
+
+          <CollapseBar 
+            key={rental.id}
+            title='Équipments'
+            content={equipments} />
         </div>
       </div>
     </div>

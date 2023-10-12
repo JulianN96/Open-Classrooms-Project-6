@@ -5,10 +5,12 @@
 
 //Base
 @import './Base/globalLayout';
+@import './Base/app';
 
 //Components
 @import './Components/rentalsTile';
 @import './Components/hero';
+@import './Components/collapsebar';
 //Layout
 @import './Layout/rentalsList';
 @import './Layout/banner';

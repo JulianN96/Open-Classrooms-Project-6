@@ -9,7 +9,7 @@ import Home from './pages/Home';
 
 function Layout() {
   return (
-    <div className='homepage'>
+    <div className='app'>
       <TopBanner />
         <Outlet />
       <Footer />
