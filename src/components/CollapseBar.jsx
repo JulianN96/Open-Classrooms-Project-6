@@ -9,8 +9,8 @@ export default function CollapseBar(props) {
       'collapse__dropdownBarArrow--rotated'
     );
     event.currentTarget.parentElement.classList.toggle(
-        'collapse__dropdown--hidden'
-    )
+      'collapse__dropdown--hidden'
+    );
   };
 
   return (
@@ -32,7 +32,7 @@ export default function CollapseBar(props) {
         </svg>
       </div>
       <div className='collapse__dropdownInfoContainer collapse__dropdownInfoContainer--hidden'>
-        <p className='collapse__dropdownInfoText'>{props.content}</p>
+        <div className='collapse__dropdownInfoText'>{props.content}</div>
       </div>
     </article>
   );
