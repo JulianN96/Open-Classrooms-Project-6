@@ -448,7 +448,7 @@ body {
   align-items: center;
   color: #FF6060;
   max-width: fit-content;
-  width: 90vw;
+  max-width: 90vw;
 }
 .error404__container {
   display: flex;
@@ -457,19 +457,42 @@ body {
   justify-content: space-evenly;
 }
 .error404__404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 288px;
   font-weight: 700;
-  width: 597px;
+  max-width: 597px;
   height: 263px;
   margin: 0 0 139px 0;
 }
+@media (max-width: 767.98px) {
+  .error404__404 {
+    max-height: 132px;
+    font-size: 144px;
+    margin: 50px 0;
+  }
+}
 .error404__text {
+  text-align: center;
   font-size: 2.25rem;
   margin: 0 0 139px 0;
+  max-width: 100%;
+}
+@media (max-width: 767.98px) {
+  .error404__text {
+    font-size: 1.5rem;
+    margin: 50px 0;
+  }
 }
 .error404__Link {
   color: #FF6060;
   margin: 0 0 139px 0;
+}
+@media (max-width: 767.98px) {
+  .error404__Link {
+    margin: 50px 0;
+  }
 }
 
 .rental {

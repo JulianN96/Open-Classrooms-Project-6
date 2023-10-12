@@ -5,7 +5,7 @@
     align-items: center;
     color: $colour-primary;
     max-width: fit-content;
-    width: 90vw;
+    max-width: 90vw;
     &__container{
         display: flex;
         flex-direction: column;
@@ -13,19 +13,35 @@
         justify-content: space-evenly;
     }
     &__404{
-        
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 288px;
         font-weight: 700;
-        width: 597px;
+        max-width: 597px;
         height: 263px;
         margin: 0 0 139px 0;
+        @media(max-width: $breakpoint-mobile){
+            max-height: 132px;
+            font-size: 144px;
+            margin: 50px 0;
+        }
     }
     &__text{
+        text-align: center;
         font-size: $fs-h2;
         margin: 0 0 139px 0;
+        max-width: 100%;
+        @media(max-width: $breakpoint-mobile){
+            font-size: $fs-mobile-h1;
+            margin: 50px 0;
+        }
     }
     &__Link{
         color: $colour-primary;
         margin: 0 0 139px 0;
+        @media(max-width: $breakpoint-mobile){
+            margin: 50px 0;
+        }
     }
 }

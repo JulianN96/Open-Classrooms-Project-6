@@ -1,9 +1,10 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function TopBanner() {
   return (
     <div className='banner'>
+      <Link to ='/'>
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width='211'
@@ -33,6 +34,8 @@ export default function TopBanner() {
           fill='#FF6060'
         />
       </svg>
+      </Link>
+      
       <nav className='banner__nav'>
         <NavLink
           className={({ isActive, isPending }) =>
