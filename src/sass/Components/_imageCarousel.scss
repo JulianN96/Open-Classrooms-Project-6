@@ -1,0 +1,19 @@
+.imageCarousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $colour-primary;
+  border-radius: 25px;
+  width: 100%;
+  aspect-ratio: 248 / 83;
+  @media (max-width: $breakpoint-mobile) {
+    width: 335px;
+    height: 255px;
+  }
+
+  &__next,
+  &__prev {
+    margin: 1em;
+    cursor: pointer;
+  }
+}

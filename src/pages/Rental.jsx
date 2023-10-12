@@ -4,6 +4,7 @@ import testdata from '../data/testdata.json';
 import Tag from '../components/Tag';
 import CollapseBar from '../components/CollapseBar';
 import Ratings from '../components/Ratings';
+import ImageCarousel from '../components/ImageCarousel';
 
 export default function Rental() {
   const rentalData = testdata;
@@ -22,18 +23,11 @@ export default function Rental() {
       {equipment}
     </p>
   ));
+  
   return (
     <div className='rental'>
       <div className='rental__container'>
-        <div
-          className='rental__hero'
-          style={{
-            backgroundImage: `url(${rental.cover})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        ></div>
+        <ImageCarousel pictures={rental.pictures}/>
         <div className='rental__titleHostContainer'>
           <div className='rental__titleContainer'>
             <h1 className='rental__title'>{rental.title}</h1>

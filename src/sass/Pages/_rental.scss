@@ -7,58 +7,47 @@
   width: 90vw;
   &__container {
     width: 100%;
-    @media (max-width: $breakpoint-mobile){
+    @media (max-width: $breakpoint-mobile) {
       width: 90vw;
-      display: flex; 
+      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
   }
-  &__hero {
-    height: 415px;
-    background-color: $colour-primary;
-    border-radius: 25px;
-    width: 100%;
-    @media (max-width: $breakpoint-mobile){
-      width: 335px;
-      height: 255px;
-    };
-  }
   &__titleHostContainer {
     display: flex;
     justify-content: space-between;
     margin: 30px 0;
-    @media (max-width: $breakpoint-mobile){
+    @media (max-width: $breakpoint-mobile) {
       flex-direction: column;
       width: 100%;
       margin: 15px 0;
-      
     }
   }
   &__title {
     font-size: $fs-h2;
     line-height: 142.6%;
     margin: 0;
-    @media (max-width: $breakpoint-mobile){
+    @media (max-width: $breakpoint-mobile) {
       font-size: $fs-body;
-    };
+    }
   }
   &__location {
     margin: 0;
     font-size: $fs-body;
-    @media (max-width: $breakpoint-mobile){
+    @media (max-width: $breakpoint-mobile) {
       font-size: 14px;
-    };
+    }
   }
   &__tags {
     display: flex;
     gap: 10px;
     margin-top: 20px;
-    @media (max-width: $breakpoint-mobile){
+    @media (max-width: $breakpoint-mobile) {
       width: 100%;
       overflow: scroll;
-    };
+    }
   }
   &__tag {
     display: flex;
@@ -68,25 +57,24 @@
     height: 25px;
     background: $colour-primary;
     border-radius: 10px;
-    @media (max-width: $breakpoint-mobile){
+    @media (max-width: $breakpoint-mobile) {
       min-width: 84px;
       height: 18px;
       border-radius: 5px;
-    };
+    }
     &Text {
       margin: 0;
       color: $colour-text;
       text-align: center;
       font-size: 14px;
       line-height: 142.6%;
-      @media (max-width: $breakpoint-mobile){
+      @media (max-width: $breakpoint-mobile) {
         font-size: 10px;
-      };
+      }
     }
   }
 
   &__host {
-
     &InfoContainer {
       display: flex;
       align-items: center;
@@ -98,52 +86,51 @@
       flex-direction: column;
       justify-content: space-between;
 
-      @media (max-width: $breakpoint-mobile){
+      @media (max-width: $breakpoint-mobile) {
         flex-direction: row-reverse;
         align-items: center;
-      };
+      }
     }
     &Name {
       text-align: right;
       font-size: $fs-body;
       line-height: 142.6%;
-      @media (max-width: $breakpoint-mobile){
+      @media (max-width: $breakpoint-mobile) {
         font-size: $fs-mobile-body;
-      };
+      }
     }
     &Image {
       width: 64px;
       height: 64px;
       fill: #c4c4c4;
       border-radius: 50%;
-      @media (max-width: $breakpoint-mobile){
+      @media (max-width: $breakpoint-mobile) {
         width: 32px;
         height: 32px;
-      };
+      }
     }
-    &Stars{
+    &Stars {
       display: flex;
       align-items: center;
     }
-    &StarMeter{
-      @media (max-width: $breakpoint-mobile){
+    &StarMeter {
+      @media (max-width: $breakpoint-mobile) {
         width: 98px;
-      };
+      }
     }
   }
 
   &Info {
     &__Container {
-      
       display: flex;
       justify-content: space-between;
       gap: 30px;
       margin: 38px 0;
       align-items: flex-start;
-      @media (max-width: $breakpoint-mobile){
+      @media (max-width: $breakpoint-mobile) {
         flex-direction: column;
         margin-top: 0;
-      };
+      }
     }
     // &__dropdown {
     //   display: flex;
@@ -165,7 +152,7 @@
     //     @media (max-width: $breakpoint-mobile){
     //       width: 300px;
     //       height: 12px;
-          
+
     //     };
     //     &Title {
     //       margin: 0;
