@@ -126,7 +126,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: auto;
+  height: 52px;
 }
 .collapse__dropdown--hidden {
   height: 52px;

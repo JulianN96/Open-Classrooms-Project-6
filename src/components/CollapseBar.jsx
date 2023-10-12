@@ -1,6 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function CollapseBar(props) {
+  const [activeDropdown, setActiveDropdown] = useState(false);
+
+  function toggleActive(event){
+    if(activeDropdown){
+      event.currentTarget.parentElement.style.height='52px';
+      event.currentTarget.nextSibling.classList.toggle(
+        'collapse__dropdownInfoContainer--hidden'
+      );
+      event.currentTarget.children[1].classList.toggle(
+        'collapse__dropdownBarArrow--rotated'
+      );
+      setActiveDropdown(false)
+    } else if(!activeDropdown){
+      event.currentTarget.parentElement.style.height='auto';
+      event.currentTarget.nextSibling.classList.toggle(
+        'collapse__dropdownInfoContainer--hidden'
+      );
+      event.currentTarget.children[1].classList.toggle(
+        'collapse__dropdownBarArrow--rotated'
+      );
+      setActiveDropdown(true)
+    }
+  }
+
   const toggleMenuOpen = (event) => {
     event.currentTarget.nextSibling.classList.toggle(
       'collapse__dropdownInfoContainer--hidden'
@@ -14,8 +38,8 @@ export default function CollapseBar(props) {
   };
 
   return (
-    <article className='collapse__dropdown collapse__dropdown--hidden'>
-      <div className='collapse__dropdownBar' onClick={toggleMenuOpen}>
+    <article className='collapse__dropdown'>
+      <div className='collapse__dropdownBar' onClick={toggleActive}>
         <h2 className='collapse__dropdownBarTitle'>{props.title}</h2>
         <svg
           className='collapse__dropdownBarArrow collapse__dropdownBarArrow--rotated'

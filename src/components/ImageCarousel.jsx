@@ -5,7 +5,6 @@ export default function ImageCarousel(props) {
   const imageArray = props.pictures;
   let [imageIndex, setImageIndex] = useState(0);
   let [currentImage, setCurrentImage] = useState(imageArray[imageIndex]);
-  console.log(imageArray.length);
 
   function imageFwd() {
     if (
@@ -13,19 +12,23 @@ export default function ImageCarousel(props) {
       imageIndex > imageArray.length
     ) {
       setImageIndex(0);
+      setCurrentImage(imageArray[0]);
     } else if (imageIndex < imageArray.length) {
       setImageIndex(imageIndex + 1);
+      setCurrentImage(imageArray[imageIndex + 1]);
     }
-    setCurrentImage(imageArray[imageIndex]);
+    
   }
 
   function imageBack() {
     if (imageIndex === 0 || imageIndex > imageArray.length) {
       setImageIndex(imageArray.length - 1);
+      setCurrentImage(imageArray[imageArray.length - 1]);
     } else if (imageIndex < 0 || imageIndex < imageArray.length) {
       setImageIndex(imageIndex - 1);
+      setCurrentImage(imageArray[imageIndex - 1]);
     }
-    setCurrentImage(imageArray[imageIndex]);
+    
   }
 
   return (
