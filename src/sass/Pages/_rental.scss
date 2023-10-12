@@ -5,6 +5,8 @@
   align-items: center;
   color: $colour-primary;
   width: 90vw;
+  justify-self: flex-start;
+  flex-grow: 1;
   &__container {
     width: 100%;
     @media (max-width: $breakpoint-mobile) {

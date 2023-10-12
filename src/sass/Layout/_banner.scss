@@ -5,9 +5,10 @@
     justify-content: space-between;
     align-items: center;
     margin: 50px;
+    flex-grow: 0;
     @media (max-width: $breakpoint-mobile){
         min-width: 335px;
-        max-width: 335px;
+        max-height: 68px;
         margin: 20px 0 27px 0;
         display: flex;
         justify-content: space-between;
