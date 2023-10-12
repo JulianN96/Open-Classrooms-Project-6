@@ -3,39 +3,46 @@ import React, { useState } from 'react';
 export default function CollapseBar(props) {
   const [activeDropdown, setActiveDropdown] = useState(false);
 
-  function toggleActive(event){
-    if(activeDropdown){
-      event.currentTarget.parentElement.style.height='52px';
-      event.currentTarget.nextSibling.classList.toggle(
-        'collapse__dropdownInfoContainer--hidden'
-      );
-      event.currentTarget.children[1].classList.toggle(
-        'collapse__dropdownBarArrow--rotated'
-      );
-      setActiveDropdown(false)
-    } else if(!activeDropdown){
-      event.currentTarget.parentElement.style.height='auto';
-      event.currentTarget.nextSibling.classList.toggle(
-        'collapse__dropdownInfoContainer--hidden'
-      );
-      event.currentTarget.children[1].classList.toggle(
-        'collapse__dropdownBarArrow--rotated'
-      );
-      setActiveDropdown(true)
-    }
+  let maxHeight = '';
+  console.log(window.innerWidth);
+  if (window.innerWidth < 767) {
+    maxHeight = '12px';
+  } else if (window.innerWidth > 767) {
+    maxHeight = '52px';
   }
 
-  const toggleMenuOpen = (event) => {
-    event.currentTarget.nextSibling.classList.toggle(
-      'collapse__dropdownInfoContainer--hidden'
-    );
-    event.currentTarget.children[1].classList.toggle(
-      'collapse__dropdownBarArrow--rotated'
-    );
-    event.currentTarget.parentElement.classList.toggle(
-      'collapse__dropdown--hidden'
-    );
-  };
+  function toggleActive(event) {
+    if (activeDropdown) {
+      event.currentTarget.parentElement.style.maxHeight = maxHeight;
+      event.currentTarget.nextSibling.classList.toggle(
+        'collapse__dropdownInfoContainer--hidden'
+      );
+      event.currentTarget.children[1].classList.toggle(
+        'collapse__dropdownBarArrow--rotated'
+      );
+      setActiveDropdown(false);
+    } else if (!activeDropdown) {
+      event.currentTarget.parentElement.style.maxHeight = '500px';
+      event.currentTarget.nextSibling.classList.toggle(
+        'collapse__dropdownInfoContainer--hidden'
+      );
+      event.currentTarget.children[1].classList.toggle(
+        'collapse__dropdownBarArrow--rotated'
+      );
+      setActiveDropdown(true);
+    }
+  }
+  // const toggleMenuOpen = (event) => {
+  //   event.currentTarget.nextSibling.classList.toggle(
+  //     'collapse__dropdownInfoContainer--hidden'
+  //   );
+  //   event.currentTarget.children[1].classList.toggle(
+  //     'collapse__dropdownBarArrow--rotated'
+  //   );
+  //   event.currentTarget.parentElement.classList.toggle(
+  //     'collapse__dropdown--hidden'
+  //   );
+  // };
 
   return (
     <article className='collapse__dropdown'>

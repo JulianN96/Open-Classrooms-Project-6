@@ -126,18 +126,12 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 52px;
-}
-.collapse__dropdown--hidden {
-  height: 52px;
-}
-@media (max-width: 767.98px) {
-  .collapse__dropdown--hidden {
-    height: 12px;
-  }
+  max-height: 52px;
+  transition: max-height 500ms ease-in-out;
 }
 @media (max-width: 767.98px) {
   .collapse__dropdown {
+    max-height: 12px;
     width: 300px;
   }
 }
@@ -197,7 +191,9 @@ body {
 }
 .collapse__dropdownInfoContainer--hidden {
   transform: scaleY(0);
-  height: 0;
+}
+.collapse__dropdownInfoContainer--hidden:first-child {
+  transform: scaleY(0);
 }
 @media (max-width: 767.98px) {
   .collapse__dropdownInfoContainer {
@@ -210,6 +206,8 @@ body {
   color: #FF6060;
   font-weight: 400;
   line-height: 142.6%;
+  transform: scaleY(1);
+  transition: transform 500ms ease-in-out;
 }
 @media (max-width: 767.98px) {
   .collapse__dropdownInfoText {
@@ -287,6 +285,7 @@ body {
     justify-self: center;
     align-self: flex-start;
     gap: 22px;
+    margin-top: 0;
   }
 }
 .rentalsList__Link {
@@ -304,6 +303,7 @@ body {
 }
 @media (max-width: 767.98px) {
   .banner {
+    max-width: 335px;
     min-width: 335px;
     max-height: 68px;
     margin: 20px 0 27px 0;
@@ -326,8 +326,8 @@ body {
 @media (max-width: 767.98px) {
   .banner__nav {
     width: 190px;
-    gap: 10px;
-    justify-content: space-evenly;
+    gap: 26px;
+    justify-content: flex-end;
   }
 }
 .banner__nav a {
