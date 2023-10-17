@@ -10,31 +10,24 @@ export default function Rental() {
   const rentalData = testdata;
   const rentalId = useParams();
   const rental = rentalData.find((thisrental) => thisrental.id === rentalId.id);
-  //   event.currentTarget.nextSibling.classList.toggle(
-  //     'rentalInfo__dropdownInfoContainer--hidden'
-  //   );
-  //   event.currentTarget.children[1].classList.toggle(
-  //     'rentalInfo__dropdownBarArrow--rotated'
-  //   );
-  // };
 
   const equipments = rental.equipments.map((equipment) => (
     <p key={'equipment' + equipment} className='collapse__dropdownInfoText'>
       {equipment}
     </p>
   ));
-  
+
   return (
     <div className='rental'>
       <div className='rental__container'>
-        <ImageCarousel pictures={rental.pictures}/>
+        <ImageCarousel pictures={rental.pictures} />
         <div className='rental__titleHostContainer'>
           <div className='rental__titleContainer'>
             <h1 className='rental__title'>{rental.title}</h1>
             <h2 className='rental__location'>{rental.location}</h2>
             <div className='rental__tags'>
-              {rental.tags.map(tagInfo => (
-                <Tag tag={tagInfo}/>
+              {rental.tags.map((tagInfo) => (
+                <Tag key={tagInfo} tag={tagInfo} />
               ))}
             </div>
           </div>

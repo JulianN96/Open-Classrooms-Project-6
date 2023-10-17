@@ -1,24 +1,24 @@
 import React from 'react';
 
-export default function Ratings(props) {
+export default function Ratings({ rating }) {
   let starColours = ['#E3E3E3', '#E3E3E3', '#E3E3E3', '#E3E3E3', '#E3E3E3'];
-  if (props.rating == 1) {
+  if (rating == 1) {
     starColours[0] = '#FF6060';
-  } else if (props.rating == 2) {
+  } else if (rating == 2) {
     starColours[0] = '#FF6060';
     starColours[1] = '#FF6060';
-  } else if( props.rating == 3){
+  } else if (rating == 3) {
     starColours[0] = '#FF6060';
-    starColours[1] = '#FF6060';   
-    starColours[2] = '#FF6060';   
-  } else if( props.rating == 4){
+    starColours[1] = '#FF6060';
+    starColours[2] = '#FF6060';
+  } else if (rating == 4) {
     starColours[0] = '#FF6060';
-    starColours[1] = '#FF6060';   
+    starColours[1] = '#FF6060';
     starColours[2] = '#FF6060';
     starColours[3] = '#FF6060';
-  } else if( props.rating == 5){
+  } else if (rating == 5) {
     starColours[0] = '#FF6060';
-    starColours[1] = '#FF6060';   
+    starColours[1] = '#FF6060';
     starColours[2] = '#FF6060';
     starColours[3] = '#FF6060';
     starColours[4] = '#FF6060';

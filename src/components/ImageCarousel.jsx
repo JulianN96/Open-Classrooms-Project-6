@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 
-export default function ImageCarousel(props) {
-  const imageArray = props.pictures;
+export default function ImageCarousel({ pictures }) {
+  const imageArray = pictures;
   let [imageIndex, setImageIndex] = useState(0);
   let [currentImage, setCurrentImage] = useState(imageArray[imageIndex]);
 
@@ -17,7 +17,6 @@ export default function ImageCarousel(props) {
       setImageIndex(imageIndex + 1);
       setCurrentImage(imageArray[imageIndex + 1]);
     }
-    
   }
 
   function imageBack() {
@@ -28,7 +27,6 @@ export default function ImageCarousel(props) {
       setImageIndex(imageIndex - 1);
       setCurrentImage(imageArray[imageIndex - 1]);
     }
-    
   }
 
   return (

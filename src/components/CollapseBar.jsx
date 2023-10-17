@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 
-export default function CollapseBar(props) {
+export default function CollapseBar({ title, content }) {
   const [activeDropdown, setActiveDropdown] = useState(false);
 
   let maxHeight = '';
-  console.log(window.innerWidth);
   if (window.innerWidth < 767) {
     maxHeight = '12px';
   } else if (window.innerWidth > 767) {
@@ -32,22 +31,11 @@ export default function CollapseBar(props) {
       setActiveDropdown(true);
     }
   }
-  // const toggleMenuOpen = (event) => {
-  //   event.currentTarget.nextSibling.classList.toggle(
-  //     'collapse__dropdownInfoContainer--hidden'
-  //   );
-  //   event.currentTarget.children[1].classList.toggle(
-  //     'collapse__dropdownBarArrow--rotated'
-  //   );
-  //   event.currentTarget.parentElement.classList.toggle(
-  //     'collapse__dropdown--hidden'
-  //   );
-  // };
 
   return (
     <article className='collapse__dropdown'>
       <div className='collapse__dropdownBar' onClick={toggleActive}>
-        <h2 className='collapse__dropdownBarTitle'>{props.title}</h2>
+        <h2 className='collapse__dropdownBarTitle'>{title}</h2>
         <svg
           className='collapse__dropdownBarArrow collapse__dropdownBarArrow--rotated'
           xmlns='http://www.w3.org/2000/svg'
@@ -63,7 +51,7 @@ export default function CollapseBar(props) {
         </svg>
       </div>
       <div className='collapse__dropdownInfoContainer collapse__dropdownInfoContainer--hidden'>
-        <div className='collapse__dropdownInfoText'>{props.content}</div>
+        <div className='collapse__dropdownInfoText'>{content}</div>
       </div>
     </article>
   );
