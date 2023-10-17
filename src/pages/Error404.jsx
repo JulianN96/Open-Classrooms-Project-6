@@ -1,7 +1,5 @@
 import React from 'react';
-import TopBanner from '../TopBanner';
 import { Link } from 'react-router-dom';
-import Footer from '../Footer';
 
 export default function Error404() {
   return (

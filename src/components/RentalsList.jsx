@@ -8,7 +8,15 @@ export default function RentalsList() {
 
   return (
     <div className='rentalsList'>
-        <RentalTile rentalData = {rentalData}/>
+      <div className='rentalsList__container'>
+        {rentalData.map(rental => (
+          <RentalTile 
+            id={rental.id}
+            cover = {rental.cover}
+            title = {rental.title}
+          />
+        ))}
+      </div>
     </div>
   );
 }

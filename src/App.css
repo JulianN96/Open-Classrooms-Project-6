@@ -216,7 +216,7 @@ body {
 }
 
 .imageCarousel {
-  background-color: #FF6060;
+  background-color: none;
   border-radius: 25px;
   width: 100%;
   aspect-ratio: 248/83;
