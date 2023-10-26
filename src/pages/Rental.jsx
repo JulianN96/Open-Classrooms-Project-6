@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import testdata from '../data/testdata.json';
 import Tag from '../components/Tag';
 import CollapseBar from '../components/CollapseBar';
@@ -10,6 +10,10 @@ export default function Rental() {
   const rentalData = testdata;
   const rentalId = useParams();
   const rental = rentalData.find((thisrental) => thisrental.id === rentalId.id);
+
+  if(!rental){
+    return <Navigate to='/404'/>
+  }
 
   const equipments = rental.equipments.map((equipment) => (
     <p key={'equipment' + equipment} className='collapse__dropdownInfoText'>
